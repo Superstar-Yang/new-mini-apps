@@ -1,0 +1,45 @@
+<view class="detail_swiper">
+  <swiper autoplay circular indicator-dots>
+    <swiper-item wx:for="{{goodsObj.pics}}" wx:key="pics_id" bindtap="handlepreviewImage" data-url="{{item.pics_mid}}">
+      <image mode="widthFix" src="{{item.pics_mid?item.pics_mid:'http://www.sucaijishi.com/uploadfile/2017/0510/20170510104938760.gif'}}"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="goods_price">￥{{goodsObj.goods_price}}</view>
+<view class="goods_name_row">
+  <view class="goods_name">{{goodsObj.goods_name}}</view>
+  <view class="goods_collect">
+    <text class="iconfont icon-shou_cang"></text>
+    <text class="collect_text">收藏</text>
+  </view>
+</view>
+<view class="goods_info">
+  <view class="goods_info_title">图文详情</view>
+  <view class="goods_info-content">
+    <!-- 富文本 -->
+    <!-- {{goodsObj.goods_introduce}} -->
+    <rich-text nodes="{{goodsObj.goods_introduce}}"></rich-text>
+  </view>
+</view>
+<view class="tab_tool">
+  <view class="tool_item">
+    <view class="iconfont icon-kefu"></view>
+    <view>客服</view>
+    <button open-type="contact"></button>
+  </view>
+  <view class="tool_item">
+    <view class="iconfont icon-fenxiang"></view>
+    <view>分享</view>
+    <button open-type="share"></button>
+  </view>
+  <navigator open-type="switchTab" url="/pages/cart/index" class="tool_item">
+    <view class="iconfont icon-gouwuchekong"></view>
+    <view>购物车</view>
+  </navigator>
+  <view class="tool_item btn_cart" bindtap="hondleCartAdd">
+    <view>加入购物车</view>
+  </view>
+  <view class="tool_item btn_bay">
+    <view>立即购买</view>
+  </view>
+</view>

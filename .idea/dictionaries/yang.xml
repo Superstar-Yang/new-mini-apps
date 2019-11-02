@@ -2,8 +2,12 @@
   <dictionary name="yang">
     <words>
       <w>cates</w>
+      <w>daddress</w>
       <w>getcates</w>
+      <w>getgoods</w>
       <w>getswiper</w>
+      <w>handlepreview</w>
+      <w>hondle</w>
       <w>regenerator</w>
       <w>swiper</w>
     </words>

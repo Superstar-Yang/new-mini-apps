@@ -31,6 +31,9 @@
   height: 27.72711207vw;
   border-left: 10rpx solid #fff;
 }
+.index_floor .floor_group .floor_list navigator:nth-last-child(-n+4) {
+  border-top: 10rpx solid #fff;
+}
 .index_floor .floor_group .floor_list navigator:nth-child(2),
 .index_floor .floor_group .floor_list navigator:nth-child(3) {
   border-left: 10rpx solid #fff;

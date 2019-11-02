@@ -4,6 +4,7 @@
     "pages/logs/logs",
     "pages/category/index",
     "pages/goods_list/index",
+    "pages/goods_detail/index",
     "pages/cart/index",
     "pages/collect/index",
     "pages/search/index",
