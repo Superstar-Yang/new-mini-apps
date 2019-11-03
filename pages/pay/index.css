@@ -2,12 +2,6 @@
 page {
   padding-bottom: 90rpx;
 }
-.recvice_address_row .address_btn {
-  padding: 20rpx;
-}
-.recvice_address_row .address_btn button {
-  width: 60%;
-}
 .recvice_address_row .user_Info_row {
   padding: 20rpx;
   display: flex;
@@ -30,12 +24,6 @@ page {
   display: flex;
   padding: 15rpx;
   border-bottom: 1rpx solid #cccccc;
-}
-.cart_content .cart_main .cart_item .cart_chk_box {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .cart_content .cart_main .cart_item .cart_img_warp {
   flex: 2;
@@ -70,14 +58,6 @@ page {
 .cart_content .cart_main .cart_item .cart_text_info .cart_price_wrap .cart_uum_tool {
   display: flex;
 }
-.cart_content .cart_main .cart_item .cart_text_info .cart_price_wrap .cart_uum_tool .cart_Info_box {
-  width: 50rpx;
-  height: 50rpx;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1rpx solid #cccccc;
-}
 .cart_content .cart_main .cart_item .cart_text_info .cart_price_wrap .cart_uum_tool .cart_Info_num {
   width: 50rpx;
   height: 50rpx;
@@ -93,12 +73,6 @@ page {
   width: 100%;
   height: 90rpx;
   background-color: white;
-}
-.cart_tom .all_chk_wrap {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .cart_tom .total_price_wrap {
   flex: 4;

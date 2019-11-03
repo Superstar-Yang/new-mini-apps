@@ -1,1 +1,97 @@
-/* pages/pay/index.less */
+/* pages/cart/index.less */
+page {
+  padding-bottom: 90rpx;
+}
+.recvice_address_row .user_Info_row {
+  padding: 20rpx;
+  display: flex;
+}
+.recvice_address_row .user_Info_row .userInfo {
+  flex: 5;
+}
+.recvice_address_row .user_Info_row .user_phone {
+  flex: 3;
+  text-align: right;
+}
+.cart_content .cart_title {
+  padding: 20rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--themeColor);
+  border-bottom: 1px solid currentColor;
+}
+.cart_content .cart_main .cart_item {
+  display: flex;
+  padding: 15rpx;
+  border-bottom: 1rpx solid #cccccc;
+}
+.cart_content .cart_main .cart_item .cart_img_warp {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_content .cart_main .cart_item .cart_img_warp image {
+  width: 85%;
+}
+.cart_content .cart_main .cart_item .cart_text_info {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cart_content .cart_main .cart_item .cart_text_info .cart_Info_title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #666666;
+}
+.cart_content .cart_main .cart_item .cart_text_info .cart_price_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.cart_content .cart_main .cart_item .cart_text_info .cart_price_wrap .cart_Info_price {
+  color: var(--themeColor);
+  font-size: 32rpx;
+}
+.cart_content .cart_main .cart_item .cart_text_info .cart_price_wrap .cart_uum_tool {
+  display: flex;
+}
+.cart_content .cart_main .cart_item .cart_text_info .cart_price_wrap .cart_uum_tool .cart_Info_num {
+  width: 50rpx;
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_tom {
+  position: fixed;
+  display: flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  background-color: white;
+}
+.cart_tom .total_price_wrap {
+  flex: 4;
+  padding-right: 20rpx;
+  text-align: right;
+}
+.cart_tom .total_price_wrap .total_price .total_price_text {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--themeColor);
+}
+.cart_tom .oladr_price {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34rpx;
+  font-weight: 600;
+  background-color: var(--themeColor);
+  color: #fff;
+}
+/*# sourceMappingURL=index.wxss.map */

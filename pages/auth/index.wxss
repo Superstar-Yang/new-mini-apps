@@ -1,1 +1,5 @@
 /* pages/auth/index.less */
+button{
+  margin-top: 20rpx;
+  width: 60%;
+}
