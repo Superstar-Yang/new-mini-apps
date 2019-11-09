@@ -116,14 +116,14 @@ Page({
     //   }
     // })
     try{
-    const res = await getSetting();
-    const scopeAddress = res.authSetting["scope.address"]
-    if(scopeAddress ===false){
-      await openSetting();
-    }
-    let address = await chooseAddress();
-    address.all = address.provinceName+address.cityName+address.countyName+address.detailInfo
-    wx.setStorageSync('address', address);
+      const res = await getSetting();
+      const scopeAddress = res.authSetting["scope.address"]
+      if(scopeAddress ===false){
+        await openSetting();
+      }
+      let address = await chooseAddress();
+      address.all = address.provinceName+address.cityName+address.countyName+address.detailInfo
+      wx.setStorageSync('address', address);
     }
     catch(err){
       console.log(err);
