@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -45,6 +45,10 @@
 		},
 		"game": {
 			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
@@ -89,6 +93,48 @@
 					"id": -1,
 					"name": "支付授权",
 					"pathName": "pages/auth/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "登录页面",
+					"pathName": "pages/login/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/user/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单查询",
+					"pathName": "pages/order/index",
+					"query": "type=1",
+					"scene": null
+				},
+				{
+					"id": 9,
+					"name": "商品收藏",
+					"pathName": "pages/collect/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索中心",
+					"pathName": "pages/search/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "意见反馈",
+					"pathName": "pages/feedback/index",
 					"scene": null
 				}
 			]

@@ -11,21 +11,38 @@ import regeneratorRuntime from '../../lib/runtime/runtime';
   4.如果存在 修改购物车数量  执行购物车数量++ 重新把购物车数组 填充回缓存中
   5.不存在的直接添加新元素 新元素带上 购物数量属性num 重新把购物车数组 填充回缓存中
   6.弹出提示
+ 4页面收藏
+  1页面onshow 的时候 加载缓存中的商品收藏数据
+  2判断当前商品是不是被收藏
+    1是 改变页面的图标
+    3 不是。。。
+  3点击商品收藏按钮
+   1判断该商品否存在于缓存数组中
+   2已经存在 把该商品删除
+   3没有存在 把商品加到收藏数组中 存入到缓存中即可
  */
 Page({
   data: {
-    goodsObj:{}
+    goodsObj:{},
+    isCollect:false
   },
   //商品对象
   GoodsInfo:{},
-  onLoad: function (options) {
+  onShow: function () {
+    let pages = getCurrentPages()
+    let currentPages = pages[pages.length-1];
+    let options = currentPages.options
     const {goods_id} = options;
     this.getgoodsDetail(goods_id)
   },
   //获取商品详情数据
  async getgoodsDetail(goods_id){
-  const res = await request({url:'/goods/detail',data:{goods_id}})
-  this.GoodsInfo = res;
+   const res = await request({url:'/goods/detail',data:{goods_id}})
+   this.GoodsInfo = res;
+   //获取缓存中收藏的数组
+   let collect= wx.getStorageSync('collect') || [];
+   //判断该商品是否存在于缓存数组中
+   let isCollect = collect.some(v=>{v.goods_id===this.GoodsInfo.goods_id})
    this.setData({
      goodsObj:{
        goods_name:res.goods_name,
@@ -66,6 +83,38 @@ Page({
     wx.showToast({
       title: '加入成功',
       mark:true
+    })
+  },
+  handleChangeCollect(){
+    let isCollect = false;
+    //获取缓存中的收藏商品、
+    let collect= wx.getStorageSync('collect') || [];
+    //判断该商品是否存在于缓存中
+    let index = collect.findIndex(v=>v.goods_id === this.GoodsInfo.goods_id);
+    //当index！==-1 表示已经收藏过
+    if(index!==-1){
+      //能找到 已经收藏过 在数组中删除该商品
+      collect.splice(index,1)
+      isCollect = false;
+      wx.showToast({
+        title: '取消成功',
+        icon:'success',
+        mask:true
+      })
+    }
+    else{
+      //没有收藏过
+      collect.push(this.GoodsInfo)
+      isCollect = true;
+      wx.showToast({
+        title: '收藏成功',
+        icon:'success',
+        mask:true
+      })
+    }
+   wx.setStorageSync('collect', collect);
+    this.setData({
+      isCollect
     })
   }
 })

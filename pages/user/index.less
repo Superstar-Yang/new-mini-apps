@@ -1,0 +1,114 @@
+/* pages/user/index.less */
+page{
+  background: #dedede;
+}
+.user_info_wrap{
+  height: 45vh;
+  overflow: hidden;
+  background-color: var(--themeColor);
+  position: relative;
+  .user_img_wrap{
+    position: relative;
+    .user_bg{
+      height: 50vh;
+      filter:blur(10rpx);
+    }
+    .user_info{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%);
+      top: 30%;
+      text-align: center;
+      .user_icon{
+        width: 150rpx;
+        height: 150rpx;
+        border-radius: 50%;
+      }
+      .user_name{
+        color:#fff;
+        margin-top: 40rpx;
+      }
+    }
+  }
+  .user_btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40%;
+    border:1px solid greenyellow;
+    font-size: 38rpx;
+    color:greenyellow;
+    padding: 30rpx;
+    border-radius: 10rpx;
+  }
+}
+.container{
+  position: relative;
+  .user_main{
+    padding-bottom: 100rpx;
+    color:#999;
+    position: absolute;
+    left: 50%;
+    top: -40rpx;
+    transform:translateX(-50%);
+    width: 90%;
+    .history_wrap{
+      background: white;
+      display: flex;
+      navigator{
+        flex: 1;
+        text-align: center;
+        padding: 20rpx 0;
+        .main_num{
+          color:var(--themeColor)
+        }
+        .main_content{
+
+        }
+      }
+    }
+    .orders_wrap{
+      background: white;
+      margin-top: 20rpx;
+      .orders_title{
+        padding: 15rpx;
+        border-bottom: 1rpx solid #cccccc;
+      }
+      .orders_content{
+        display: flex;
+        padding: 15rpx 0;
+        navigator{
+          flex: 1;
+          text-align: center;
+          .iconfont{
+            color:var(--themeColor)
+          }
+          .orders_name{}
+        }
+      }
+    }
+    .address_wrap{
+      margin-top: 30rpx;
+      background: white;
+      padding: 20rpx;
+    }
+    .app_info_wrap{
+      margin-top: 30rpx;
+      background: white;
+      .app_info_item{
+        padding: 20rpx;
+        border-bottom: 1rpx solid #ccc;
+      }
+      .app_info_contact{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    .recommend_wrap{
+      margin-top: 30rpx;
+      background: white;
+      padding: 20rpx;}
+  }
+}
+

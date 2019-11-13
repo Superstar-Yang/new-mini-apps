@@ -35,6 +35,9 @@
   align-items: center;
   border-left: 1px solid #000;
 }
+.goods_name_row .goods_collect .icon-shoucang1 {
+  color: #D85D5E;
+}
 .goods_info .goods_info_title {
   font-size: 32 rpx;
   font-weight: 600;

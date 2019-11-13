@@ -1,19 +1,24 @@
 // pages/auth/index.js
 import regeneratorRuntime from '../../lib/runtime/runtime';
 import {request} from '../../request/index';
-import { login } from '../../utils/aysncwx.js';
+import {login} from '../../utils/aysncwx.js';
+
 Page({
-  async handleGetUserInfo(e){
-    try{
-      const {encryptedData,rawData,iv,signature} = e.datail;
+  async handleGetUserInfo(e) {
+    try {
+      //1 获取用户信息
+      const {encryptedData,rawData,iv,signature} = e.detail;
+      //2 获取小程序登录成功后的code
       const {code} = await login();
-      const loginParams = {encryptedData,rawData,iv,signature,token}
-      const res =await request({url:'/users/wxlogin',data:loginParams,method:'post'})
+      const loginParams = {encryptedData, rawData, iv, signature, code}
+      //3 发送请求 获取用户的token
+      const {token} = await request({url: '/users/wxlogin', data: loginParams, method: 'post'})
+      //4 把token存入缓存中 同时跳转回上一个页面
       wx.setStorageSync('token', token);
       wx.navigateBack({
-        delta:1
+        delta: 1
       })
-    }catch(err){
+    } catch (err) {
       console.log(err);
     }
   }

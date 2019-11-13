@@ -42,5 +42,5 @@
     </view>
     <view>包含运费</view>
   </view>
-  <view class="oladr_price" bindtap="handleOrdrPay">支付（{{totalNum}}）</view>
+  <view class="oladr_price" bindtap="handleOrderPay">支付（{{totalNum}}）</view>
 </view>

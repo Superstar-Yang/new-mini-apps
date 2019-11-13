@@ -120,4 +120,4 @@ page {
   background-color: var(--themeColor);
   color: #fff;
 }
-/*# sourceMappingURL=index.wxss.map */
+/*# sourceMappingURL=index.less.map */
